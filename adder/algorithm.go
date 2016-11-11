@@ -66,7 +66,7 @@ func (d *AdderDistiller) Process(in *distil.InputSet, out *distil.OutputSet) {
 		var v1 = in.Get(0, i).V
 		var v2 = in.Get(1, i).V
 
-		var result = v1 + v2
+		var result = v1 + v2 + 0.3
 		if !math.IsNaN(result) {
 			out.Add(0, time, result)
 		}

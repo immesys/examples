@@ -20,19 +20,19 @@ func main() {
 
 	// This will register a distillate that processes a path
 	// read from an environment variable
-	path1 := os.Getenv("REF_PMU_PATH")
+	path1 := os.Getenv("INPUT1")
 	if path1 == "" {
-		fmt.Println("Missing $REF_PMU_PATH")
+		fmt.Println("Missing $INPUT1")
 		os.Exit(1)
 	}
-	path2 := os.Getenv("REF_PMU_PATH2")
+	path2 := os.Getenv("INPUT2")
 	if path2 == "" {
-		fmt.Println("Missing $REF_PMU_PATH2")
+		fmt.Println("Missing $INPUT2")
 		os.Exit(1)
 	}
-	name := os.Getenv("OUTPUT_NAME")
+	name := os.Getenv("OUTPUT")
 	if name == "" {
-		fmt.Println("Missing $OUTPUT_NAME")
+		fmt.Println("Missing $OUTPUT")
 		os.Exit(1)
 	}
 	ds.RegisterDistillate(&distil.Registration{
